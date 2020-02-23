@@ -6,12 +6,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>avazdusevich-deposit-managment</artifactId>
+        <artifactId>avazdusevich-deposit-management</artifactId>
         <groupId>com.epam.brest.courses</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>deposit-managment-model</artifactId>
+    <artifactId>deposit-management-model</artifactId>
 
 
 </project>

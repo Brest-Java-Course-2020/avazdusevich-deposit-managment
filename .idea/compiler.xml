@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="deposit-managment-model" />
-        <module name="deposit-managment-dao" />
+        <module name="deposit-management-dao" />
+        <module name="deposit-management-model" />
+        <module name="deposit-management-test" />
       </profile>
     </annotationProcessing>
   </component>

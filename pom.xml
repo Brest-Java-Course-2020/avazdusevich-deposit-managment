@@ -5,19 +5,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.epam.brest.courses</groupId>
-    <artifactId>avazdusevich-deposit-managment</artifactId>
+    <artifactId>avazdusevich-deposit-management</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>deposit-managment-dao</module>
-        <module>deposit-managment-model</module>
+        <module>deposit-management-dao</module>
+        <module>deposit-management-model</module>
+        <module>deposit-management-test</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.springframework.version>5.1.4.RELEASE</org.springframework.version>
+        <org.springframework.version>5.1.8.RELEASE</org.springframework.version>
         <java.version>1.8</java.version>
+        <junit.version>5.2.0</junit.version>
     </properties>
 
     <dependencyManagement>
@@ -25,12 +27,17 @@
 
             <dependency>
                 <groupId>com.epam.brest.courses</groupId>
-                <artifactId>deposit-managment-model</artifactId>
+                <artifactId>deposit-management-model</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.epam.brest.courses</groupId>
-                <artifactId>deposit-managment-dao</artifactId>
+                <artifactId>deposit-management-dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.epam.brest.courses</groupId>
+                <artifactId>deposit-management-test</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -49,13 +56,43 @@
                 <artifactId>spring-beans</artifactId>
                 <version>${org.springframework.version}</version>
             </dependency>
-
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.11</version>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${org.springframework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${org.springframework.version}</version>
                 <scope>test</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.vintage</groupId>
+                <artifactId>junit-vintage-engine</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>1.4.200</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

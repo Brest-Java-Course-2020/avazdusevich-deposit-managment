@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS deposit;
+CREATE TABLE deposit (
+  depositId INT NOT NULL AUTO_INCREMENT,
+  depositName VARCHAR(255) NOT NULL UNIQUE,
+  PRIMARY KEY (depositId)
+);
